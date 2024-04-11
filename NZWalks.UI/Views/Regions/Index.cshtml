@@ -1,0 +1,40 @@
+﻿@using NZWalks.UI.Models.Dto
+@model IEnumerable<RegionDto>
+@{
+    
+}
+<h1 class="mt-0">Regions</h1>
+
+    <div class="d-flex justify-content-end" >
+        <a class="btn btn-success" asp-controller="Regions" asp-action="add">Add</a>
+    </div>
+<table border="1"class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>ImageUrl</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var region in Model.OrderBy(x=>x.Name))
+        {
+            <tr>
+                <td>@region.Id</td>
+                <td>@region.Name</td>
+                <td>@region.Code</td>
+                <td>@region.RegionImageUrl</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Edit" asp-controller="Regions" asp-route-id="@region.Id">Edit</a>
+                    <form asp-action="Delete" asp-controller="Regions" asp-route-id="@region.Id" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-dark">Delete</button>
+                    </form>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
