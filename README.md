@@ -1,9 +1,9 @@
 # 1. Cai cac thu vien can thiet:
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Tools
-Microsoft.EntityFrameworkCore.SqlServer
-Microsoft.EntityFrameworkCore.Design
-Microsoft.EntityFrameworkCore.Proxies
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore.Design
+- Microsoft.EntityFrameworkCore.Proxies
 
 # 2. Su dung cau lenh command ben duoi:
 Scaffold-DbContext "Server=TRUONG\SQLEXPRESS;Database=Bcrypt;user id=sa;password=1234567;trusted_connection=true;encrypt=false" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity -Context DatabaseContext -f
